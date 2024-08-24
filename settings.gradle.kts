@@ -4,10 +4,12 @@ pluginManagement {
         google()
         gradlePluginPortal()
         mavenCentral()
+        maven("https://jitpack.io")
     }
 }
 
 dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
@@ -16,5 +18,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "pixel-perfect-ui"
-include(":adp")
 include(":adpsampleapplication")
+include(":adp")

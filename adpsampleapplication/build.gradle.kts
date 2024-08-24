@@ -67,5 +67,5 @@ dependencies {
     debugImplementation(libs.compose.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(project(":adp"))
-//    implementation("com.github.mohitsoni48:aDp:1.0.0.alpha4")
+//    implementation("com.github.mohitsoni48:aDp:1.0.0.alpha8")
 }

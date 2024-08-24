@@ -1,5 +1,6 @@
 package com.mohitsoni.adp
 
+import android.content.res.Resources
 import androidx.compose.runtime.Stable
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.ExperimentalUnitApi
@@ -9,12 +10,17 @@ import androidx.compose.ui.unit.TextUnitType
 var dpRatio = 1f
 var spRatio = 1f
 
-expect class DisplayResource
-expect value class ADp(val value: Int) {
+@JvmInline
+value class ADp constructor(val value: Int) {
     companion object{
-        fun initializeAdp(resources: DisplayResource, designWidth: Int = 414)
+        fun initializeAdp(resources: Resources, designWidth: Int) {
+            val sweetRatio = resources.displayMetrics.widthPixels.div(resources.displayMetrics.density)
+            dpRatio = designWidth.toFloat().div(sweetRatio)
+            spRatio = resources.configuration.fontScale.times(dpRatio)
+        }
     }
 }
+
 
 @Stable
 inline val Int.aDp: Dp
