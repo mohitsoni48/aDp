@@ -14,5 +14,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "aDp"
-include(":shared")
+rootProject.name = "pixel-perfect-ui"
+include(":adp")
+include(":adpsampleapplication")
