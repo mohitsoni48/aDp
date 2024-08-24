@@ -21,6 +21,10 @@ android {
             useSupportLibrary = true
         }
     }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
 
     buildTypes {
         release {
@@ -63,4 +67,5 @@ dependencies {
     debugImplementation(libs.compose.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(project(":adp"))
+//    implementation("com.github.mohitsoni48:aDp:1.0.0.alpha4")
 }

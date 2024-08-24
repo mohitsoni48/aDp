@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
+    id("maven-publish")
 }
 
 kotlin {
@@ -43,8 +44,18 @@ android {
     defaultConfig {
         minSdk = 28
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+afterEvaluate {
+    publishing{
+        publications {
+            repositories {
+                maven {
+                    group = "com.github.mohitsoni48"
+                    name = "aDp"
+                    version = "1.0.0.alpha4"
+                }
+            }
+        }
     }
 }
