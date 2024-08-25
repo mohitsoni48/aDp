@@ -61,7 +61,7 @@ publishing {
         create<MavenPublication>("release") {
             groupId = "com.github.mohitsoni48"
             artifactId = "aDp"
-            version = "1.0.0.alpha9"
+            version = "1.0.0"
 
             afterEvaluate {
                 from(components["release"])

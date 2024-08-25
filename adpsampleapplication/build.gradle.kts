@@ -66,6 +66,6 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.compose.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation(project(":adp"))
-//    implementation("com.github.mohitsoni48:aDp:1.0.0.alpha8")
+//    implementation(project(":adp"))
+    implementation("com.github.mohitsoni48:aDp:1.0.0.alpha9")
 }

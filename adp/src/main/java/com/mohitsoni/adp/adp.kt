@@ -7,16 +7,20 @@ import androidx.compose.ui.unit.ExperimentalUnitApi
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.TextUnitType
 
-var dpRatio = 1f
-var spRatio = 1f
+private var _dpRatio = 1f
+private var _spRatio = 1f
+val dpRatio
+    get() = _dpRatio
+val spRatio
+    get() = _spRatio
 
 @JvmInline
 value class ADp constructor(val value: Int) {
     companion object{
         fun initializeAdp(resources: Resources, designWidth: Int) {
             val sweetRatio = resources.displayMetrics.widthPixels.div(resources.displayMetrics.density)
-            dpRatio = designWidth.toFloat().div(sweetRatio)
-            spRatio = resources.configuration.fontScale.times(dpRatio)
+            _dpRatio = designWidth.toFloat().div(sweetRatio)
+            _spRatio = resources.configuration.fontScale.times(dpRatio)
         }
     }
 }
