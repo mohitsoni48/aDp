@@ -46,4 +46,8 @@ Text(
 )
 ```
 
+## Liked my work?
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L3L612MBTA)
+
 ### Note: This library is not optimized for foldable phones and tablets. Also If your device supports configuration changes, you will need to initialize again on each configuration change
